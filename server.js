@@ -27,6 +27,9 @@ app.use(cors());
 mongoDBConnection();
 
 //========= ALL  REQUESTS ================//
+app.get('/', (req, res) => {
+  res.send('Tekgai in the building');
+});
 app.use('/api', heroPage);
 app.use('/api', message);
 app.use('/api', Settings);
